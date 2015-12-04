@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3480A9B9292FC16BB1D4985A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF3E5645F9FAFF14093383F /* Pods.framework */; };
 		ACBD536F1C116DDB0077BFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD536E1C116DDB0077BFBC /* AppDelegate.swift */; };
 		ACBD53711C116DDB0077BFBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD53701C116DDB0077BFBC /* ViewController.swift */; };
 		ACBD53741C116DDB0077BFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBD53721C116DDB0077BFBC /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		602B0D417F8B1CFA2066682F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6AF3E5645F9FAFF14093383F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBD536B1C116DDB0077BFBC /* webpay-cardio-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "webpay-cardio-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBD536E1C116DDB0077BFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACBD53701C116DDB0077BFBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		ACBD53751C116DDB0077BFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACBD53781C116DDB0077BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACBD537A1C116DDB0077BFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E460D6E981D9DCF6B7AAED3F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3480A9B9292FC16BB1D4985A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140F4B889B27CD4D20C84A7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AF3E5645F9FAFF14093383F /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ACBD53621C116DDB0077BFBC = {
 			isa = PBXGroup;
 			children = (
 				ACBD536D1C116DDB0077BFBC /* webpay-cardio-sample */,
 				ACBD536C1C116DDB0077BFBC /* Products */,
+				DFBFB5752FAA6A63FF10A32D /* Pods */,
+				140F4B889B27CD4D20C84A7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = "webpay-cardio-sample";
 			sourceTree = "<group>";
 		};
+		DFBFB5752FAA6A63FF10A32D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E460D6E981D9DCF6B7AAED3F /* Pods.debug.xcconfig */,
+				602B0D417F8B1CFA2066682F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACBD537D1C116DDB0077BFBC /* Build configuration list for PBXNativeTarget "webpay-cardio-sample" */;
 			buildPhases = (
+				44A5E9F73317B449D9E8DBCB /* Check Pods Manifest.lock */,
 				ACBD53671C116DDB0077BFBC /* Sources */,
 				ACBD53681C116DDB0077BFBC /* Frameworks */,
 				ACBD53691C116DDB0077BFBC /* Resources */,
+				E00EA93E4F96F8482C1BE311 /* Embed Pods Frameworks */,
+				E225822CB3DB784D27F84BE8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44A5E9F73317B449D9E8DBCB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E00EA93E4F96F8482C1BE311 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E225822CB3DB784D27F84BE8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ACBD53671C116DDB0077BFBC /* Sources */ = {
@@ -245,6 +320,7 @@
 		};
 		ACBD537E1C116DDB0077BFBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E460D6E981D9DCF6B7AAED3F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "webpay-cardio-sample/Info.plist";
@@ -256,6 +332,7 @@
 		};
 		ACBD537F1C116DDB0077BFBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 602B0D417F8B1CFA2066682F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "webpay-cardio-sample/Info.plist";
@@ -284,6 +361,7 @@
 				ACBD537F1C116DDB0077BFBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

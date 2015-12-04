@@ -1,0 +1,13 @@
+PODS:
+  - CardIO (5.2.2)
+  - WebPay (2.0.2)
+
+DEPENDENCIES:
+  - CardIO
+  - WebPay
+
+SPEC CHECKSUMS:
+  CardIO: 2460db0f4936f3441b08d51e3904b436d77ec8fc
+  WebPay: 292660eaea3e2625c8c602d8616f74585aab5222
+
+COCOAPODS: 0.39.0
