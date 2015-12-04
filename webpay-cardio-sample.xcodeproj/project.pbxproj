@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		3480A9B9292FC16BB1D4985A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF3E5645F9FAFF14093383F /* Pods.framework */; };
 		ACBD536F1C116DDB0077BFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD536E1C116DDB0077BFBC /* AppDelegate.swift */; };
-		ACBD53711C116DDB0077BFBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD53701C116DDB0077BFBC /* ViewController.swift */; };
 		ACBD53741C116DDB0077BFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBD53721C116DDB0077BFBC /* Main.storyboard */; };
 		ACBD53761C116DDB0077BFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBD53751C116DDB0077BFBC /* Assets.xcassets */; };
 		ACBD53791C116DDB0077BFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBD53771C116DDB0077BFBC /* LaunchScreen.storyboard */; };
+		ACBD53811C1173FF0077BFBC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD53801C1173FF0077BFBC /* FirstViewController.swift */; };
+		ACC24FA51C118D26005303A7 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC24FA41C118D26005303A7 /* FormViewController.swift */; };
+		ACC24FA91C1192F7005303A7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC24FA81C1192F7005303A7 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +22,14 @@
 		6AF3E5645F9FAFF14093383F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBD536B1C116DDB0077BFBC /* webpay-cardio-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "webpay-cardio-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBD536E1C116DDB0077BFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACBD53701C116DDB0077BFBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACBD53731C116DDB0077BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACBD53751C116DDB0077BFBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACBD53781C116DDB0077BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACBD537A1C116DDB0077BFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACBD53801C1173FF0077BFBC /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		ACC24FA41C118D26005303A7 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		ACC24FA81C1192F7005303A7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		ACC24FAA1C11931A005303A7 /* BrigdingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrigdingHeader.h; sourceTree = "<group>"; };
 		E460D6E981D9DCF6B7AAED3F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC24FA91C1192F7005303A7 /* Accelerate.framework in Frameworks */,
 				3480A9B9292FC16BB1D4985A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +49,7 @@
 		140F4B889B27CD4D20C84A7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACC24FA81C1192F7005303A7 /* Accelerate.framework */,
 				6AF3E5645F9FAFF14093383F /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -70,11 +77,13 @@
 			isa = PBXGroup;
 			children = (
 				ACBD536E1C116DDB0077BFBC /* AppDelegate.swift */,
-				ACBD53701C116DDB0077BFBC /* ViewController.swift */,
+				ACBD53801C1173FF0077BFBC /* FirstViewController.swift */,
+				ACC24FA41C118D26005303A7 /* FormViewController.swift */,
 				ACBD53721C116DDB0077BFBC /* Main.storyboard */,
 				ACBD53751C116DDB0077BFBC /* Assets.xcassets */,
 				ACBD53771C116DDB0077BFBC /* LaunchScreen.storyboard */,
 				ACBD537A1C116DDB0077BFBC /* Info.plist */,
+				ACC24FAA1C11931A005303A7 /* BrigdingHeader.h */,
 			);
 			path = "webpay-cardio-sample";
 			sourceTree = "<group>";
@@ -210,7 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACBD53711C116DDB0077BFBC /* ViewController.swift in Sources */,
+				ACC24FA51C118D26005303A7 /* FormViewController.swift in Sources */,
+				ACBD53811C1173FF0077BFBC /* FirstViewController.swift in Sources */,
 				ACBD536F1C116DDB0077BFBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -311,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -327,6 +337,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.takecian.webpay-cardio-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "webpay-cardio-sample/BrigdingHeader.h";
 			};
 			name = Debug;
 		};
@@ -339,6 +350,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.takecian.webpay-cardio-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "webpay-cardio-sample/BrigdingHeader.h";
 			};
 			name = Release;
 		};
