@@ -20,7 +20,7 @@ pod install
 ```
 2 Set public key
 
-Set your key in AppDelegate.swift.
+Set your key in WebpayClient.swift.
 To get key, go to https://webpay.jp/.
 
 ```
