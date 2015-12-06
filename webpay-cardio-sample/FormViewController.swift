@@ -17,6 +17,7 @@ class FormViewController: UIViewController, WPYCardFormViewDelegate, CardIOPayme
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var cardBaseView: UIView!
     @IBOutlet weak var payButton: UIButton!
+    private var price = 120
     private var tap: UITapGestureRecognizer!
 
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class FormViewController: UIViewController, WPYCardFormViewDelegate, CardIOPayme
         cardBaseView.addSubview(form)
         
         payButton.enabled = false
-        priceLabel.text = "¥120"
+        priceLabel.text = "¥\(price)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,13 +71,22 @@ class FormViewController: UIViewController, WPYCardFormViewDelegate, CardIOPayme
                 print("\(newError.localizedDescription)")
                 self.showAlert("\(newError.localizedDescription)")
             } else {
-                //post token to your server
                 print("token = \(token.tokenId)")
-                self.showAlert("token = \(token.tokenId)")
+                self.charge(token.tokenId)
             }
         })
     }
     
+    func charge(token: String){
+        WebpayClient.charge(price, token: token) { [unowned self] (isSuccess) -> Void in
+            if isSuccess {
+                self.showAlert("succeeded. Check your dashboard")
+            }else{
+                self.showAlert("failed. Check logs.")
+            }
+        }
+    }
+
     func showAlert(text: String){
         let alertController = UIAlertController(title: text, message: nil, preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: {

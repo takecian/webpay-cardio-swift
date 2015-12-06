@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3480A9B9292FC16BB1D4985A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF3E5645F9FAFF14093383F /* Pods.framework */; };
+		AC02A68C1C13D730002DF5FD /* WebpayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC02A68B1C13D730002DF5FD /* WebpayClient.swift */; };
 		ACBD536F1C116DDB0077BFBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD536E1C116DDB0077BFBC /* AppDelegate.swift */; };
 		ACBD53741C116DDB0077BFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBD53721C116DDB0077BFBC /* Main.storyboard */; };
 		ACBD53761C116DDB0077BFBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBD53751C116DDB0077BFBC /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		602B0D417F8B1CFA2066682F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6AF3E5645F9FAFF14093383F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC02A68B1C13D730002DF5FD /* WebpayClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebpayClient.swift; sourceTree = "<group>"; };
 		ACBD536B1C116DDB0077BFBC /* webpay-cardio-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "webpay-cardio-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBD536E1C116DDB0077BFBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACBD53731C116DDB0077BFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				ACBD536E1C116DDB0077BFBC /* AppDelegate.swift */,
 				ACBD53801C1173FF0077BFBC /* FirstViewController.swift */,
 				ACC24FA41C118D26005303A7 /* FormViewController.swift */,
+				AC02A68B1C13D730002DF5FD /* WebpayClient.swift */,
 				ACBD53721C116DDB0077BFBC /* Main.storyboard */,
 				ACBD53751C116DDB0077BFBC /* Assets.xcassets */,
 				ACBD53771C116DDB0077BFBC /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC02A68C1C13D730002DF5FD /* WebpayClient.swift in Sources */,
 				ACC24FA51C118D26005303A7 /* FormViewController.swift in Sources */,
 				ACBD53811C1173FF0077BFBC /* FirstViewController.swift in Sources */,
 				ACBD536F1C116DDB0077BFBC /* AppDelegate.swift in Sources */,
@@ -338,7 +342,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.takecian.webpay-cardio-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "05416426-cf97-46a8-a89a-50529c331094";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "webpay-cardio-sample/BrigdingHeader.h";
 			};
 			name = Debug;
@@ -352,7 +356,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.takecian.webpay-cardio-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "05416426-cf97-46a8-a89a-50529c331094";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "webpay-cardio-sample/BrigdingHeader.h";
 			};
 			name = Release;

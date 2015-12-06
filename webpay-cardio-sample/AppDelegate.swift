@@ -8,6 +8,7 @@
 
 import UIKit
 import WebPay
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        WPYTokenizer.setPublicKey("test_public_XXXXXXXXXXXXXXXXXXXXXXX")
+        WPYTokenizer.setPublicKey(WebpayClient.publicKey)
         
+//        let plainString = "\(WebpayClient.privateKey):" as NSString
+//        let plainData = plainString.dataUsingEncoding(NSUTF8StringEncoding)
+//        let base64String = plainData?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+//        
+//        Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["Authorization": "Basic " + base64String!]
+
         return true
     }
 

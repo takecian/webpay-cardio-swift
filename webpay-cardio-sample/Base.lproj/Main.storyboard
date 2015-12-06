@@ -49,7 +49,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="yME-Fc-IPS"/>
                                 </constraints>
-                                <state key="normal" title="Pay(WPYPaymentViewController)"/>
+                                <state key="normal" title="Get token(WPYPaymentViewController)"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="4"/>
