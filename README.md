@@ -4,11 +4,11 @@ Sample project which uses Webpay and CardIO written in Swift.
 Webpay と Card IO を使ったサンプルプロジェクトです。
 
 # This project does
-* Get token from webpay.
-* Read card information with Card.io.
+* Get token from webpay (with WPYPaymentViewController).
+* Read card information with Card.io (with WPYCardFormView).
+* Charge with token.
 
 # This project does not do
-* Charge with token.
 * Create customer.
 
 # Setup
