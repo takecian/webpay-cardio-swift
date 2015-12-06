@@ -10,6 +10,7 @@ import UIKit
 import WebPay
 
 class FirstViewController: UIViewController {
+    let card = WPYCreditCard()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,17 +25,25 @@ class FirstViewController: UIViewController {
     
 
     @IBAction func buttonTapped(sender: AnyObject) {
-        let paymentViewController = WPYPaymentViewController(priceTag: "¥350", callback: { viewController, token, error in
+        card.number = "4242 4242 4242 4242"
+        card.expiryMonth = WPYMonth(rawValue: 8)!
+        card.expiryYear = 2017
+        card.cvc = "123"
+
+        let paymentViewController = WPYPaymentViewController(priceTag: "¥350", card: card) { [unowned self] (viewController, token, error) -> Void in
             if let newError = error {
-                print("error:\(error.localizedDescription)")
+                print("\(newError.localizedDescription)")
+                self.showAlert("\(newError.localizedDescription)")
             } else {
                 //post token to your server
-                
+                print("token = \(token.tokenId)")
+                self.showAlert("token = \(token.tokenId)")
+
                 // when transaction is complete
                 viewController.setPayButtonComplete()
                 viewController.dismissAfterDelay(2.0)
             }
-        })
+        }
         
         navigationController?.pushViewController(paymentViewController, animated: true)
     }
@@ -45,14 +54,12 @@ class FirstViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showAlert(text: String){
+        let alertController = UIAlertController(title: text, message: nil, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: {
+            (action) -> Void in
+        }))
+        presentViewController(alertController, animated: true, completion: nil)
     }
-    */
 
 }
