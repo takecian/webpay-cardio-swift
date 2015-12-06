@@ -24,7 +24,10 @@ Set your key in WebpayClient.swift.
 To get key, go to https://webpay.jp/.
 
 ```
-WPYTokenizer.setPublicKey("your public key")
+class WebpayClient: NSObject {
+    static let publicKey = "test_public_Your_Key"
+    static let secretKey = "test_secret_Your_Key"
+}
 ```
 
 3 Run app
